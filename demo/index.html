@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="lt-ie10 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>赛氪</title>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link rel="Shortcut Icon" href="">
+        <link rel="apple-touch-icon-precomposed" href="http://cdn3.saikr.com/img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="http://cdn3.saikr.com/css/top.css">
+        <link rel="stylesheet" type="text/css" href="css/lgr.css">
+        <script>
+            window.WJ_STA_DOMAIN = "http://cdn3.saikr.com/";
+            window.WJ_IMG_DOMAIN = "http://www.saikr.com/";
+            window.WJ_WEB_DOMAIN = "http://www.saikr.com/";
+        </script>
+        <script src="http://cdn3.saikr.com/js/sea/sea.js"></script>
+        <script src="http://cdn3.saikr.com/js/sea/seaConfig.js"></script>
+        <script src="http://cdn3.saikr.com/js/jquery-1.10.2.min.js"></script>
+    </head>
+
+    <body>
+
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+    
+        <div class="materialContainer">
+            <div class="box">
+                <div class="logo-box">
+                   <div class="logo-bb"><a href="javascript:;" class="logo"></a></div> 
+                </div>
+
+                <div class="title">欢迎来到赛氪</div>
+
+                <div class="input-box" >
+                    <div class="mode-nav-box clearfix">
+                        <div class="fl mode-nav js_mode_nav active">
+                            账号密码登录
+                        </div>
+                        <div class="fr mode-nav js_mode_nav">
+                            短信验证码登录
+                        </div>
+                    </div>
+                    <form class="login-form js_mode_box" class="js_mode_box" id="pwLoginForm">
+                        <span id="pwLoginError" class="login-error">未知网络错误</span>
+                        <div class="input">
+                            <label class="input-label" for="name">手机/邮箱</label>
+                            <input type="text" name="name" id="name">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" for="pass">密码</label>
+                            <input type="password" name="pass" id="pass">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="check-box">
+                            <div class="fl">
+                                <div class="fl remember-input js_rc_input">
+                                    <input type="checkbox" name="loginCheckbox" id="loginCheckbox">
+                                </div>
+                                <label class="fl remenber-label" for="loginCheckbox">
+                                    记住密码
+                                </label>
+                            </div>
+                            <div class="fr">
+                                <a href="#" class="pass-forgot">忘记密码?</a>
+                            </div>
+                        </div>
+                        <div class="button login">
+                            <button type="submit"><span>登&nbsp;录</span> <i class="fa fa-check"></i>
+                            </button>
+                        </div>
+                    </form>
+                
+                    <form class="login-form js_mode_box" style="display:none;" class="js_mode_box" id="msgLoginForm">
+                        <span id="msgLoginError" class="login-error">未知网络错误</span>
+                        <div class="input">
+                            <label class="input-label" for="phone">手机号</label>
+                            <input type="text" name="phone" id="phone">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input input-code">
+                            <label class="input-label" for="code">短信验证码</label>
+                            <input type="text" name="code" id="code">
+                            <span class="spin"></span>
+                            <a href="javascript:;" class="send-code-btn">获取验证码</a>
+                            <span class="code-error-wrap" id="codeErrorWrap"></span>
+                        </div>
+                        <div class="check-box msg-check-box">
+                            
+                            <!--<div class="fr">
+                                <span class="pass-wait" id="passWait">60秒后重新获取</span>
+                            </div>-->
+                        </div>
+                        <div class="button login">
+                            <button type="submit"><span>登&nbsp;录</span> <i class="fa fa-check"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="tp-login-box clearfix">
+                        <span class="tp-login-tit">第三方登录</span>
+                        <a href="javascript:;" class="fl tp-login-btn tp-qq-login"><i></i></a>
+                        <a href="javascript:;" class="fl tp-login-btn tp-weixin-login"><i></i></a>
+                        <a href="javascript:;" class="fr tp-login-btn tp-weibo-login"><i></i></a>
+                    </div>
+                </div>
+                <div class="login-sj-box" style="display:none">
+                    <div class="sk-reg-close js_reg_close"></div>
+                    <div class="sk-reg-top">
+                        <div class="sk-reg-top-con clearfix">
+                            <div class="fl sk-reg-top-tit">
+                                注：
+                            </div>
+                            <div class="sk-reg-top-txt">
+                                社交账号仅能注册个人账号
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">个人账号注册</div>
+                    <form class="input-box reg-form" id="perRegForm">
+                        <div class="reg-error" id="perRegError">未知网络错误</div>
+                        <div class="person">
+                            <img src="http://cdn3.saikr.com/img/sj-person.jpg"/>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" title="请输入昵称" for="nickname">昵称</label>
+                            <input type="text" name="nickname" id="nickname">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input input-code">
+                            <label class="input-label" title="请证明你不是机器人" for="nick_code">验证码</label>
+                            <input type="text" name="nick_code" id="nick_code" >
+                            <span class="spin"></span>
+                            <span class="sk-reg-code-box">
+                                <img src="http://www.saikr.com/captcha_code?0.12336374074220657" >
+                            </span>
+                            <span class="sk-code-change-btn">看不清？换一张</span>
+                        </div>
+                        <div class="check-box">
+                                <div class="fl remember-input js_rc_input">
+                                    <input type="checkbox" name="regRead" id="regRead" checked="checked">
+                                </div>
+                                <label class="fl remenber-label" for="regRead">
+                                    我同意遵守
+                                </label>
+                                <a href="javascript:;" class="fl" title="《赛氪服务协议》">《赛氪服务协议》</a>
+                        </div>
+                        <div class="button reg">
+                            <button type="submit" id="regBtnNow"><span>注&nbsp;册</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="reset-password-box" style="display:none">
+                    <div class="sk-reg-close js_reg_close"></div>
+                    <div class="sk-reg-top">
+                        <div class="sk-reg-top-con clearfix">
+                            <div class="fl sk-reg-top-tit">
+                                注：
+                            </div>
+                            <div class="sk-reg-top-txt">
+                                验证码将会发送至你的注册邮箱或手机
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">找回密码</div>
+                    <form class="input-box reg-form" id="findpwForm">
+                        <div class="input">
+                            <label class="input-label" title="请输入昵称" for="mobemail">手机号/邮箱</label>
+                            <input type="text" name="mobemail" id="mobemail">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input input-code">
+                            <label class="input-label" title="请证明你不是机器人" for="security_code">验证码</label>
+                            <input type="text" name="security_code" id="security_code" >
+                            <span class="spin"></span>
+                            <span class="sk-reg-code-box">
+                                <img src="http://www.saikr.com/captcha_code?0.12336374074220657" >
+                            </span>
+                        </div>
+                        <div class="kong-box"></div>
+                         <div class="button reg">
+                            <button type="submit" id="perRegSub"><span>获取验证码</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="reset-mob-box" style="display:none">
+                    <div class="sk-reg-close js_reg_close"></div>
+                    <div class="sk-reg-top">
+                        <div class="sk-reg-top-con clearfix">
+                            <div class="fl sk-reg-top-tit">
+                                注：
+                            </div>
+                            <div class="sk-reg-top-txt">
+                                验证码将会发送至你的注册邮箱或手机
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">重置密码</div>
+                    <form class="input-box reg-form" id="mobResetForm">
+                        <div class="input">
+                            <label class="input-label green-font">验证码已发送至手机号：152*****889</label>
+                          
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" title="请输入新密码" for="newpassword">新密码</label>
+                            <i class="new-password active js_newpass"></i>
+                            <input type="password" name="newpassword" id="newpasscode" class="js_newpassword">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input input-code">
+                            <label class="input-label label-spn" title="请输入验证码" for="get_code">手机收到的6位数字验证码</label>
+                            <input type="text" name="get_code" id="get_code" >
+                            <span class="spin"></span>
+                            <span class="reset-get-code">
+                              59秒后重新获取
+                            </span>
+                        </div>
+                         <div class="kong-box"></div>
+                        <div class="button reg">
+                            <button type="submit" class="disable" id="getMobCode"><span>重置密码</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="reset-email-box" style="display:none">
+                    <div class="sk-reg-close js_reg_close"></div>
+                    <div class="sk-reg-top">
+                        <div class="sk-reg-top-con clearfix">
+                            <div class="fl sk-reg-top-tit">
+                                注：
+                            </div>
+                            <div class="sk-reg-top-txt">
+                                验证码将会发送至你的注册邮箱或手机
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">重置密码</div>
+                    <form class="input-box reg-form" id="emailResetForm">
+                        <div class="input">
+                            <label class="input-label green-font">验证码已发送至邮箱：807****@qq.com</label>
+                          
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" title="请输入昵称" for="newpassword">新密码</label>
+                            <i class="new-password active js_newpass"></i>
+                            <input type="password" name="newpassword" id="newpassword" class="js_newpassword">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input input-code">
+                            <label class="input-label label-spn" title="请证明你不是机器人" for="get_email_code">邮箱收到的6位数字验证码</label>
+                            <input type="text" name="get_email_code" id="get_email_code" >
+                            <span class="spin"></span>
+                            <span class="reset-get-code">
+                              59秒后重新获取
+                            </span>
+                        </div>
+                        <div class="kong-box"></div>
+                        <div class="button reg">    
+                            <button type="submit" id="getCode"><span>获取验证码</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+           </div>
+            <div class="overbox">
+                <div class="material-button alt-2"><span class="shape"></span>
+                </div>
+                <div class="logo-box">
+                   <div class="logo-bb"><a href="javascript:;" class="logo"></a></div> 
+                </div>
+                <div class="title">选择用户类型</div>
+                <div class="title-list clearfix">
+                    <a class="fl left-list js_type_btn" href="javascript:;">
+                        <span class="type-img"></span>
+                        <span class="type-wj">我是参赛者</span>
+                    </a>
+                    <a class="fr right-list js_type_btn" href="javascript:;">
+                        <span class="type-img"></span>
+                        <span class="type-wj">我是赛事组织者</span>
+                    </a>
+                </div>
+                <div class="sk-reg-box js_reg_box">
+                    <div class="sk-reg-close js_reg_close"></div>
+                        <div class="sk-reg-top">
+                            <div class="sk-reg-top-con clearfix">
+                                <div class="fl sk-reg-top-tit">
+                                    注：
+                                </div>
+                                <div class="sk-reg-top-txt">
+                                    每个邮箱仅能申请一个账号：组织号或者个人号，此邮箱将用于登录赛氪平台
+                                </div>
+                            </div>
+                        </div>
+                    <div class="title">个人账号注册</div>
+                    <form class="input-box reg-form" id="perRegForm">
+                        <div class="reg-error" id="perRegError">未知网络错误</div>
+                        <div class="input">
+                            <label class="input-label"  title="个人账号可用手机号或邮箱注册" for="regname">手机/邮箱</label>
+                            <input type="text" name="regname" id="regname" >
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" title="请填写6-128位密码，区分大小写（允许输入字母、数字、下划线、标点符号，不允许有空格）" for="regpass">密码</label>
+                            <input type="password" name="regpass" id="regpass">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" title="请再次输入密码" for="reregpass">确认密码</label>
+                            <input type="password" name="reregpass" id="reregpass">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input input-code">
+                            <label class="input-label" title="请证明你不是机器人" for="captcha_code">验证码</label>
+                            <input type="text" name="captcha_code" id="captcha_code" >
+                            <span class="spin"></span>
+                            <span class="sk-reg-code-box">
+                                <img src="http://www.saikr.com/captcha_code?0.12336374074220657" >
+                            </span>
+                            <span class="sk-code-change-btn">看不清？换一张</span>
+                        </div>
+                        <div class="check-box">
+                                <div class="fl remember-input js_rc_input">
+                                    <input type="checkbox" name="regRead" id="regRead" checked="checked">
+                                </div>
+                                <label class="fl remenber-label" for="regRead">
+                                    我同意遵守
+                                </label>
+                                <a href="javascript:;" class="fl" title="《赛氪服务协议》">《赛氪服务协议》</a>
+                        </div>
+                        <div class="button reg">
+                            <button type="submit" id="perRegSub"><span>注&nbsp;册</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sk-reg-box js_reg_box">
+                    <div class="sk-reg-close js_reg_close"></div>
+                        <div class="sk-reg-top">
+                            <div class="sk-reg-top-con clearfix">
+                                <div class="fl sk-reg-top-tit">
+                                    注：
+                                </div>
+                                <div class="sk-reg-top-txt">
+                                    每个邮箱仅能申请一个账号：组织号或者个人号，此邮箱将用于登录赛氪平台
+                                </div>
+                            </div>
+                        </div>
+                    <div class="title">组织账号注册</div>
+                    <form class="input-box reg-form" id="groupRegForm">
+                        <div class="reg-error" id="groupRegError"></div>
+                        <div class="input">
+                            <label class="input-label"  title="组织账号只能用邮箱注册" for="groupname">邮箱</label>
+                            <input type="text" name="groupname" id="groupname" >
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" title="请填写6-128位密码，区分大小写（允许输入字母、数字、下划线、标点符号，不允许有空格）" for="grouppass">密码</label>
+                            <input type="password" name="grouppass" id="grouppass">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input">
+                            <label class="input-label" title="请再次输入密码" for="regrouppass">确认密码</label>
+                            <input type="password" name="regrouppass" id="regrouppass">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="input input-code">
+                            <label class="input-label" title="请证明你不是机器人" for="group_captcha_code">验证码</label>
+                            <input type="text" name="group_captcha_code" id="group_captcha_code" >
+                            <span class="spin"></span>
+                            <span class="sk-reg-code-box">
+                                <img src="http://www.saikr.com/captcha_code?0.12336374074220657" >
+                            </span>
+                            <span class="sk-code-change-btn">看不清？换一张</span>
+                        </div>
+                        <div class="check-box">
+                                <div class="fl remember-input js_rc_input">
+                                    <input type="checkbox" name="regGroupRead" id="regGroupRead" checked="checked">
+                                </div>
+                                <label class="fl remenber-label" for="regGroupRead">
+                                    我同意遵守
+                                </label>
+                                <a href="javascript:;" class="fl" title="《赛氪服务协议》">《赛氪服务协议》</a>
+                        </div>
+                        <div class="button reg">
+                            <button type="submit" id="groupRegSub"><span>注&nbsp;册</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sk-reg-box js_reg_box">
+                    <div class="sk-reg-close js_reg_close"></div>
+                        <div class="sk-reg-top">
+                            <div class="sk-reg-top-con clearfix">
+                                <div class="fl sk-reg-top-tit">
+                                    注：
+                                </div>
+                                <div class="sk-reg-top-txt">
+                                   注册时仅能从个人账号或组织账号中选择一种进行注册。此账号将用于登录赛氪平台。
+                                </div>
+                            </div>
+                        </div>
+                    <div class="title">账号激活</div>
+                     <div class="no-input">
+                           <p class="more-big-font">感谢注册，请验证您的手机号以激活账号</p>
+                            <p class="mini-font clearfix"><i class="iconfont-note fl"></i>手机号仅作为登录凭证，赛氪将对您的个人信息保密</p>
+                    </div>
+                    <form class="input-box reg-form" id="perRegForm">  
+                        <div class="input input-code">
+                            <label class="input-label label-spn" title="请证明你不是机器人" for="regmessage">短信验证码</label>
+                            <input type="text" name="regmessage" id="regmessage" >
+                            <span class="spin"></span>
+                            <span class="message-code">
+                              获取验证码
+                            </span>
+                        </div>
+                         <div class="kong-box"></div>
+                        <div class="button reg">                          
+                           <button type="submit" id="activateNow"><span>立即激活</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sk-reg-box js_reg_box">
+                    <div class="sk-reg-close js_reg_close"></div>
+                        <div class="sk-reg-top">
+                            <div class="sk-reg-top-con clearfix">
+                                <div class="fl sk-reg-top-tit">
+                                    注：
+                                </div>
+                                <div class="sk-reg-top-txt">
+                                   注册时仅能从个人账号或组织账号中选择一种进行注册。此账号将用于登录赛氪平台。
+                                </div>
+                            </div>
+                        </div>
+                    <div class="title">账号激活</div>
+                     <div class="no-input">
+                           <p class="more-big-font">感谢注册，请验证您的邮箱以激活账号</p>
+                            <p class="mini-font clearfix"><i class="iconfont-note fl"></i>已发送，请去邮箱查收！</p>
+                    </div>
+                    <form class="input-box reg-form" id="perRegForm">  
+                        <div class="input input-code">
+                        <!--     <label class="label-spn green-font" title="请证明你不是机器人" for="emialcode">ningfeng7554@163.com</label> -->
+                            <input class="spn-input-1" type="text" name="regemial" readonly="readonly" id="regemail" value="ningfeng7554@163.com">
+                            <span class="spin"></span>
+                        </div>
+                        <div class="kong-box"><span>没有收到邮件？请尝试</span><a href="javascript:;" class="green-font">重新发送</a></div>
+                        <div class="button reg">  
+                            <button type="submit" id="activateEmlNow"><span>去邮箱激活</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    
+    </body>
+</html>
+<!-- 兼容提示弹窗 -->
+<div class="pop-box pop-modal compatible-pop-modal">
+    <div class="pop-box-tit">温馨提示</div>
+    <div class="pop-text-info-box">
+        <p class="pop-info-tit">非常抱歉！本站不支持旧版本IE浏览器~~建议使用IE10/IE11/Chrome/Firefox/Safari等高级浏览器浏览。</p>
+    </div>
+</div>
+<div class="lg-mask compatible-mask"></div>
+<div class="lg-mask" id="popMask"></div>
+<div class="lg-error-box" id="ajaxMessageBox">
+    <div class="lg-error-icon"></div>
+    <div class="lg-error-con" id="ajaxMessage">
+        <dl class="lg-web-error">
+            <dt>Oops~网络错误</dt>
+            <dd>出现了网络错误，请检查您的网络是否正常</dd>
+        </dl>
+    </div>
+</div>
+<script src="http://cdn3.saikr.com/js/lib/top-4.5.js"></script>
+<script src="js/lib/lgr.js"></script>
